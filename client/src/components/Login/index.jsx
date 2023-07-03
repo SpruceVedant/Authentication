@@ -13,8 +13,10 @@ const Login = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		axios.defaults.baseURL =  "https://authapi-nujv.onrender.com";
+
 		try {
-			const url = "https://authapi-nujv.onrender.com/api/auth";
+			const url = "/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
