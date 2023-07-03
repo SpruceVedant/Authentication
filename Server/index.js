@@ -6,12 +6,12 @@ const connection = require("./db");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
- app.use(express.static('client/build'));
- app.get('*', (req, res) => {
- res.sendFile(path.join(__dirname + '/client/build/index.html'));
- });
-}
+// if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+//  app.use(express.static('client/build'));
+//  app.get('*', (req, res) => {
+//  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+//  });
+// }
 
 
 // database connection
